@@ -22,7 +22,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: mkdir -p /home/rplcicd/13512043 
+        script: mkdir -p /home/rplcicd/13521139
     - name: copy file via ssh password
       uses: appleboy/scp-action@master
       with:
@@ -31,7 +31,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         source: "app.py"
-        target: "/home/rplcicd/13512043/"
+        target: "/home/rplcicd/13521139/"
     - name: kill existing flask app
       continue-on-error: true
       uses: appleboy/ssh-action@v0.1.8
